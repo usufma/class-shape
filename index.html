@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>class inherit</title>
+</head>
+<body>
+<h1  style="color:blue;font-size:46px;"> To check Area of Circle and Triangle go to console<h1>
+	<script>
+	
+	
+	class Shape {
+  calculateArea() {
+   
+  }
+}
+
+class Circle extends Shape {
+  constructor(radius) {
+    super();
+    this.radius = radius;
+  }
+
+  calculateArea() {
+    return Math.PI * this.radius * this.radius;
+  }
+}
+
+class Triangle extends Shape {
+  constructor(base, height) {
+    super();
+    this.base = base;
+    this.height = height;
+  }
+
+  calculateArea() {
+    return 0.5 * this.base * this.height;
+  }
+}
+
+const circle = new Circle(5);
+const circleArea = circle.calculateArea();
+console.log("Area of the circle:", circleArea);
+
+const triangle = new Triangle(4, 6);
+const triangleArea = triangle.calculateArea();
+console.log("Area of the triangle:", triangleArea);
+
+	
+	</script>
+</body>
+</html>
